@@ -2,13 +2,13 @@
 #include <cstdio>
 #include <vector>
 
-#define ll long long
+#define ull unsigned long long
 
 using namespace std;
 
-vector<ll> fact;
+vector<ull> fact;
 
-ll findFact(int n){
+ull findFact(int n){
 	if(fact.size() >= n)
 		return fact[n];
 	for(int i=fact.size(); i<=n;i++){
@@ -21,6 +21,6 @@ int main(){
 	int n;
 	fact.push_back(1);
 	scanf("%d",&n);
-	printf("%lld",findFact(n));
+	cout<<findFact(n);
 	return 0;
 }
