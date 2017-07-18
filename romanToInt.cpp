@@ -18,8 +18,12 @@ int convert(string rnumeral){
 	r_to_int['D'] = 500;
 	r_to_int['M'] = 1000;
 
+	if(r_to_int.find(rnumeral[0]) == r_to_int.end())
+		return -1;
 	bin.push(r_to_int[rnumeral[0]]);
 	for(int i=1;i<rnumeral.size();i++){
+			if(r_to_int.find(rnumeral[i]) == r_to_int.end())
+				return -1;
 			if(bin.top() < r_to_int[rnumeral[i]]){
 				temp = bin.top();
 				bin.pop();
