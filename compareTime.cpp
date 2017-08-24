@@ -10,14 +10,14 @@ int main(){
 	cout<<"Enter Time 1: ";
 	cin>>hrs>>c>>min>>c>>sec;
 	assert(hrs<24 && hrs>=0);
-	assert(min<61 && min>=0);
-	assert(sec<61 && sec>=0);
+	assert(min<60 && min>=0);
+	assert(sec<60 && sec>=0);
 	time1 = hrs*60*60 + min*60 + sec;
 	cout<<"Enter Time 2: ";
 	cin>>hrs>>c>>min>>c>>sec;
 	assert(hrs<24 && hrs>=0);
-	assert(min<61 && min>=0);
-	assert(sec<61 && sec>=0);
+	assert(min<60 && min>=0);
+	assert(sec<60 && sec>=0);
 	time2 = hrs*60*60 + min*60 + sec;
 	if(time1 == time2)
 		cout<<"Both the Times are Equal\n";
